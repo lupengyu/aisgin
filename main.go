@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/lupengyu/aisgin/dal/mysql"
+	"github.com/lupengyu/aisgin/dal/redis"
 	"github.com/lupengyu/aisgin/handler"
 	"io"
 	"log"
@@ -40,6 +41,7 @@ func main() {
 	log.Println("Service starting ......")
 	initLog()
 	mysql.InitMysql()
+	redis.InitRedis()
 	r := initRouter()
 	// Listen and Server in 0.0.0.0:8080
 	r.Run(":8080")
