@@ -6,9 +6,9 @@ import (
 )
 
 const (
-	RequestID                = "REQUEST_ID"
-	MethodKey                = "K_METHOD"
-	UrlPathKey               = "URL_PATH"
+	RequestID  = "REQUEST_ID"
+	MethodKey  = "K_METHOD"
+	UrlPathKey = "URL_PATH"
 )
 
 func GenCtxFromGin(c *gin.Context) context.Context {

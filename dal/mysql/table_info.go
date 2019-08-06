@@ -5,38 +5,38 @@ import (
 )
 
 type info struct {
-	ID 	 					int64
-	Navigation_Status 		int64
-	MMSI 					int64
-	AIS						int64
-	IMO 					int64
-	Call_Sign 				string
-	Name 					string
-	Ship_Type 				int64
-	A 						int64
-	B 						int64
-	C 						int64
-	D 						int64
-	Length 					int64
-	Width 					int64
-	Position_Type 			int64
-	ETA_Month 				int64
-	ETA_Day 				int64
-	ETA_Hour 				int64
-	ETA_Minute 				int64
-	Draft 					float64
-	Destination 			string
-	Year 					int64
-	Month 					int64
-	Day 					int64
-	Hour 					int64
-	Minute 					int64
-	Second 					int64
+	ID                int64
+	Navigation_Status int64
+	MMSI              int64
+	AIS               int64
+	IMO               int64
+	Call_Sign         string
+	Name              string
+	Ship_Type         int64
+	A                 int64
+	B                 int64
+	C                 int64
+	D                 int64
+	Length            int64
+	Width             int64
+	Position_Type     int64
+	ETA_Month         int64
+	ETA_Day           int64
+	ETA_Hour          int64
+	ETA_Minute        int64
+	Draft             float64
+	Destination       string
+	Year              int64
+	Month             int64
+	Day               int64
+	Hour              int64
+	Minute            int64
+	Second            int64
 }
 
 func GetShipInfo(id string) []info {
 	rows, err := DB.Query("SELECT * from info where MMSI = ?", id)
-	if err != nil{
+	if err != nil {
 		log.Println("查询出错了")
 		return nil
 	}

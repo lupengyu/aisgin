@@ -10,7 +10,7 @@ type ship struct {
 
 func GetShipID() []int64 {
 	rows, err := DB.Query("SELECT * from ship")
-	if err != nil{
+	if err != nil {
 		log.Println("查询出错了")
 		return []int64{}
 	}

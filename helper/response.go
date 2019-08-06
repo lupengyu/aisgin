@@ -11,7 +11,7 @@ const (
 
 const (
 	CodeSuccess = int32(0)
-	CodeFailed = int32(1)
+	CodeFailed  = int32(1)
 )
 
 type GinResponse struct {
